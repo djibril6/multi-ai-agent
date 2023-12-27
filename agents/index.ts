@@ -20,10 +20,7 @@ export class MultiAgent {
     this.conversations = [];
   }
 
-  // ! this is just for testing as the knowledge chunking and storage is already handled
-  // ! by our current data-source service
-  // ! So in real world we just have to query it
-  private loadCustomKnowledge(agentId: string, knowledge: string) {
+  loadCustomKnowledge(agentId: string, knowledge: string) {
     this.dataSource.storeEmbeddings(knowledge, agentId);
   }
 

@@ -32,4 +32,13 @@ const Gabi = new Agent(
 const agents = [Craig, Matt, Gabi];
 const multiAgent = new MultiAgent(subject, moderator, agents);
 
+// ! this is just for testing as the knowledge chunking and storage is already handled
+// ! by our current data-source service
+// ! So in real world we just have to query it
+// adding custom Knowledge to user 1 (require pinecone)
+multiAgent.loadCustomKnowledge(
+  "1",
+  "Can be anything coming from web, Google doc, Notion page, ..."
+);
+
 multiAgent.run();
